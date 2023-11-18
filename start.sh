@@ -14,6 +14,7 @@ docker run --rm -v $(pwd):/app -w /app php:latest bash -c "php scripts/Setup.php
 
 rm -rf skeleton/src/SkeletonBundle.php
 rm -rf skeleton/src/DependencyInjection/SkeletonExtension.php
+
 rm -rf node_modules scripts src .gitignore CHANGELOG.md composer.json composer.lock README.md LICENSE .git vendor start.sh package.json package-lock.json
 mv skeleton/{,.[^.]}* ./
 rm -rf skeleton
