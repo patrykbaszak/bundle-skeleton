@@ -27,6 +27,7 @@ file_put_contents(__DIR__ . '/../skeleton/composer.json', json_encode($composer,
 
 // setup namespace in files
 $files = [
+    dirname(__DIR__) . '/skeleton/config/services.yaml',
     dirname(__DIR__) . '/skeleton/src/Kernel.php',
     dirname(__DIR__) . '/skeleton/src/SkeletonBundle.php',
     dirname(__DIR__) . '/skeleton/src/DepedencyInjection/SkeletonExtension.php',
@@ -40,8 +41,8 @@ foreach ($files as $file) {
             '$NAMESPACE',
             '$PACKAGE',
             '$VENDOR',
-            '$PACKAGE_LC',
-            '$VENDOR_LC',
+            '$LC_PACKAGE',
+            '$LC_VENDOR',
         ], 
         [
             $namespace,

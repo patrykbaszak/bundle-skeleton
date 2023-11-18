@@ -9,7 +9,7 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 class $PACKAGEBundle extends Bundle
 {
-    public const ALIAS = '$VENDOR_LC.$PACKAGE_LC';
+    public const ALIAS = '$LC_VENDOR.$LC_PACKAGE';
 
     public function getContainerExtension(): ExtensionInterface
     {
