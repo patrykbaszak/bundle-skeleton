@@ -30,7 +30,7 @@ $files = [
     dirname(__DIR__) . '/skeleton/config/services.yaml',
     dirname(__DIR__) . '/skeleton/src/Kernel.php',
     dirname(__DIR__) . '/skeleton/src/SkeletonBundle.php',
-    dirname(__DIR__) . '/skeleton/src/DepedencyInjection/SkeletonExtension.php',
+    dirname(__DIR__) . '/skeleton/src/DependencyInjection/SkeletonExtension.php',
     dirname(__DIR__) . '/skeleton/bin/console',
 ];
 
@@ -54,7 +54,7 @@ foreach ($files as $file) {
         $content
     );
     if (in_array($file, [
-        dirname(__DIR__) . '/skeleton/src/DepedencyInjection/SkeletonExtension.php',
+        dirname(__DIR__) . '/skeleton/src/DependencyInjection/SkeletonExtension.php',
         dirname(__DIR__) . '/skeleton/src/SkeletonBundle.php',
     ])) {
         $file = str_replace('Skeleton', implode('', array_map(fn (string $s) => ucfirst($s), explode('-', $package))), $file);
