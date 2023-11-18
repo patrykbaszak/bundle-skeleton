@@ -20,7 +20,7 @@ $composer->title ??= $title;
 $composer->description ??= $title . ' - Library';
 $composer->autoload->{'psr-4'} = (object) [$namespace . '\\' => 'src/'];
 $composer->{'autoload-dev'}->{'psr-4'} = (object) [$namespace . '\\Tests\\' => 'tests/'];
-$composer->type = 'library';
+$composer->type = 'symfony-bundle';
 $composer->scripts->{'auto-scripts'} = (object) ['cache:clear' => 'symfony-cmd'];
 
 file_put_contents(__DIR__ . '/../skeleton/composer.json', json_encode($composer, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));

@@ -1,5 +1,5 @@
 {
-    "name": "pbaszak/lib-skeleton",
+    "name": "pbaszak/bundle-skeleton",
     "type": "project",
     "license": "MIT",
     "description": "A minimal project that allows you to quickly create a new library based on Symfony using useful tools: standard-version, php-cs-fixer, phpstan, phpunit.",
