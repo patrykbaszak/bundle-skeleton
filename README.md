@@ -1,4 +1,4 @@
-# Lib Skeleton #
+# Bundle Skeleton #
 
 A minimal project that allows you to quickly create a new bundle for Symfony using useful tools: standard-version, php-cs-fixer, phpstan, phpunit.
 
