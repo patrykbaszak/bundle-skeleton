@@ -1,0 +1,17 @@
+{
+  "version": "0.1.2",
+  "devDependencies": {
+    "json": "*",
+    "standard-version": "*"
+  },
+  "standard-version": {
+    "tagPrefix": ""
+  },
+  "scripts": {
+    "version:first-release": "json -I -f package.json -e \"this.version='0.0.1'\" && standard-version -f",
+    "version:major": "standard-version -r major",
+    "version:minor": "standard-version -r minor",
+    "version:patch": "standard-version",
+    "release": "git push --follow-tags"
+  }
+}
