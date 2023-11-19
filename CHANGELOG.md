@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/patrykbaszak/bundle-skeleton/compare/1.1.0...1.1.1) (2023-11-19)
+
+
+### Bug Fixes
+
+* Fixed readme ([7224753](https://github.com/patrykbaszak/bundle-skeleton/commit/72247533b54bf5d3235a234772abe8ed5c439bc2))
+
 ## [1.1.0](https://github.com/patrykbaszak/bundle-skeleton/compare/1.0.3...1.1.0) (2023-11-19)
 
 
