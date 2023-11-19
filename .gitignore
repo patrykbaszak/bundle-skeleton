@@ -1,8 +1,10 @@
 # directories
+.vscode
 node_modules
 skeleton
 vendor
 
 # files
+.dockerfile_checksum
 composer.lock
 package-lock.json
