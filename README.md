@@ -1,4 +1,4 @@
-# Lib Skeleton #
+# Bundle Skeleton #
 
 A minimal project that allows you to quickly create a new bundle based on Symfony using useful tools: `standard-version`, `php-cs-fixer`, `phpstan`, `phpunit`, `docker`, `xdebug` and my own `starting script`. It is ready to support debugging with Visual Studio Code - just look into `.env.local` ;).
 
