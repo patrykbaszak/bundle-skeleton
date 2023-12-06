@@ -81,7 +81,7 @@ Create new file in Your project: `.vscode/launch.json`
             "type": "php",
             "request": "launch",
             "port": 5902,
-            "hostname": "localhost",
+            "hostname": "0.0.0.0",
             "pathMappings": {
                 "/app/": "${workspaceRoot}"
             }
