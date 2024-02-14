@@ -61,13 +61,24 @@ fi
 docker exec php composer create-project pbaszak/skeleton --no-interaction
 
 
-rm -rf skeleton/src
-rm -rf skeleton/config/routes.yaml
-cp -r src/src skeleton/src
+# bin
 rm -rf skeleton/bin
 cp -r src/bin skeleton/bin
-rm -rf skeleton/public
+
+# config
+rm -rf skeleton/config/routes.yaml
 cp -r src/config/services.yaml skeleton/config/services.yaml
+
+# public
+rm -rf skeleton/public
+
+# src
+rm -rf skeleton/src
+cp -r src/src skeleton/src
+
+# tests
+rm -rf skeleton/tests
+cp -r src/tests skeleton/tests
 
 docker exec php bash -c "php scripts/Setup.php $1" || exit 50
 docker stop php >/dev/null 2>&1

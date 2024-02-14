@@ -25,6 +25,11 @@ class $PACKAGEExtension extends Extension implements PrependExtensionInterface
 
     public function prepend(ContainerBuilder $container): void
     {
+        if ($container->hasParameter('$LC_VENDOR.$LC_PACKAGE.dev_mode') && true === $container->getParameter('$LC_VENDOR.$LC_PACKAGE.dev_mode')) {
+            return;
+        }
+
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loader->load('services.yaml');
     }
 }

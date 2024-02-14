@@ -3,6 +3,7 @@
 node_modules
 skeleton
 vendor
+app
 
 # files
 .dockerfile_checksum

@@ -27,11 +27,12 @@ file_put_contents(__DIR__ . '/../skeleton/composer.json', json_encode($composer,
 
 // setup namespace in files
 $files = [
-    dirname(__DIR__) . '/skeleton/config/services.yaml',
-    dirname(__DIR__) . '/skeleton/src/Kernel.php',
-    dirname(__DIR__) . '/skeleton/src/SkeletonBundle.php',
-    dirname(__DIR__) . '/skeleton/src/DependencyInjection/SkeletonExtension.php',
     dirname(__DIR__) . '/skeleton/bin/console',
+    dirname(__DIR__) . '/skeleton/config/services.yaml',
+    dirname(__DIR__) . '/skeleton/src/DependencyInjection/SkeletonExtension.php',
+    dirname(__DIR__) . '/skeleton/src/Resources/config/services.yaml',
+    dirname(__DIR__) . '/skeleton/src/SkeletonBundle.php',
+    dirname(__DIR__) . '/skeleton/tests/Kernel.php',
 ];
 
 foreach ($files as $file) {
@@ -43,6 +44,8 @@ foreach ($files as $file) {
             '$VENDOR',
             '$LC_PACKAGE',
             '$LC_VENDOR',
+            '$DIR_PACKAGE',
+            '$DIR_VENDOR',
         ], 
         [
             $namespace,
@@ -50,6 +53,8 @@ foreach ($files as $file) {
             implode('', array_map(fn (string $s) => ucfirst($s), explode('-', $vendor))),
             strtolower(implode('_', explode('-', $package))),
             strtolower(implode('_', explode('-', $vendor))),
+            $package,
+            $vendor,
         ], 
         $content
     );
@@ -63,5 +68,5 @@ foreach ($files as $file) {
 }
 
 $content = file_get_contents(dirname(__DIR__) . '/skeleton/.env.test');
-$content = str_replace('App\Kernel', $namespace . '\\Kernel', $content);
+$content = str_replace('App\Kernel', $namespace . '\\Tests\\Kernel', $content);
 file_put_contents(dirname(__DIR__) . '/skeleton/.env.test', $content);

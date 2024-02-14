@@ -1,0 +1,10 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true 
+
+    $NAMESPACE\:
+        resource: '%kernel.project_dir%/vendor/$DIR_VENDOR/$DIR_PACKAGE/src/'
+        exclude:
+            - '%kernel.project_dir%/vendor/$DIR_VENDOR/$DIR_PACKAGE/src/DependencyInjection/'
+            - '%kernel.project_dir%/vendor/$DIR_VENDOR/$DIR_PACKAGE/src/Entity/'
