@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/patrykbaszak/bundle-skeleton/compare/1.2.0...1.2.1) (2024-02-29)
+
+
+### Bug Fixes
+
+* Added error handler registration ([0431991](https://github.com/patrykbaszak/bundle-skeleton/commit/0431991d369f48ce70132167ad30942862951812))
+
 ## [1.2.0](https://github.com/patrykbaszak/bundle-skeleton/compare/1.1.1...1.2.0) (2024-02-14)
 
 
